@@ -1,0 +1,22 @@
+name: Audit
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Ежедневно в полночь
+  push:
+    branches:
+      - main
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20'
+      - name: Install dependencies
+        run: npm install
+      - name: Run audit
+        run: npm audit

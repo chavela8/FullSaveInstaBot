@@ -1,0 +1,10 @@
+{
+  "welcome": "你好！我是一个视频下载机器人。给我发送来自Instagram、TikTok或YouTube的视频链接。",
+  "help": "要下载视频，只需给我发送来自Instagram、TikTok或YouTube的视频链接。",
+  "download_start": "开始下载视频...",
+  "invalid_url": "请发送有效的视频链接。",
+  "file_too_large": "抱歉，视频太大无法通过Telegram发送。您可以使用此链接下载：",
+  "send_error": "抱歉，发送视频时出错。请稍后再试。",
+  "download_error": "抱歉，下载视频时出错。请检查链接并重试。",
+  "source": "来源"
+}

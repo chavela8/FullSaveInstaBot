@@ -1,0 +1,10 @@
+{
+  "welcome": "Ciao! Sono un bot per scaricare video. Inviami un link a un video da Instagram, TikTok o YouTube.",
+  "help": "Per scaricare un video, inviami semplicemente un link a un video da Instagram, TikTok o YouTube.",
+  "download_start": "Inizio il download del video...",
+  "invalid_url": "Per favore, invia un link video valido.",
+  "file_too_large": "Mi dispiace, il video è troppo grande per essere inviato tramite Telegram. Puoi scaricarlo usando questo link:",
+  "send_error": "Mi dispiace, si è verificato un errore durante l'invio del video. Per favore, riprova più tardi.",
+  "download_error": "Mi dispiace, si è verificato un errore durante il download del video. Per favore, controlla il link e riprova.",
+  "source": "Fonte"
+}
