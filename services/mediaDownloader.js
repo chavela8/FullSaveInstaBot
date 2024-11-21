@@ -23,7 +23,10 @@ export class MediaDownloader {
     static async getInstagramUrl(url, retries = 3) {
         for (let i = 0; i < retries; i++) {
             try {
-                const response = await axios.get(`https://api.instagram.com/oembed/?url=${url}`);
+                const response = await axios.get(`https://api.instagram.com/oembed/?url=${url}`, {
+                    responseType: 'json',
+                    maxContentLength: 500 * 1024 * 1024 // Увеличен лимит до 500MB
+                });
                 if (response.data && response.data.thumbnail_url) {
                     return response.data.thumbnail_url;
                 }

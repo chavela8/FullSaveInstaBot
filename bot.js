@@ -78,12 +78,11 @@ class TelegramMediaBot {
     }
 
     async initializeWebhook() {
-        const webhookUrl = process.env.WEBHOOK_URL ||
-            'https://fullsaveinstabot-655796952703.europe-west1.run.app';
+        const webhookUrl = process.env.WEBHOOK_URL || 'https://fullsave-insta-bot-448729b96221.herokuapp.com/webhook';
 
         try {
             await this.bot.deleteWebHook();
-            await this.bot.setWebHook(`${webhookUrl}/webhook`);
+            await this.bot.setWebHook(`${webhookUrl}`);
             logger.info('Webhook установлен успешно:', webhookUrl);
         } catch (error) {
             logger.error('Ошибка при установке webhook:', error);
@@ -102,8 +101,8 @@ class TelegramMediaBot {
         });
 
         this.app.use(limiter);
-        this.app.use(express.json({ limit: '50mb' }));
-        this.app.use(express.urlencoded({ extended: true, limit: '50mb' }));
+        this.app.use(express.json({ limit: '500mb' })); // Увеличен лимит до 500MB
+        this.app.use(express.urlencoded({ extended: true, limit: '500mb' })); // Увеличен лимит до 500MB
 
         this.app.get('/', (req, res) => {
             res.send('Telegram Bot is running!');
