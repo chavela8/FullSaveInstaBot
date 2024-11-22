@@ -6,7 +6,8 @@ import { MediaDownloader } from './services/mediaDownloader.js';
 import { TranslationService } from './services/translationService.js';
 import winston from 'winston';
 import rateLimit from 'express-rate-limit';
-import { Pool } from 'pg';
+import pkg from 'pg';
+const { Pool } = pkg;
 
 dotenv.config();
 
