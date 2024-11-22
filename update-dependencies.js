@@ -1,5 +1,4 @@
-// Сначала покажем, как правильно обновить устаревшие пакеты
-const { execSync } = require('child_process');
+import { execSync } from 'child_process';
 
 // Вспомогательная функция для выполнения команд и логирования вывода
 function runCommand(command) {

@@ -1,4 +1,4 @@
-import { addAdvertiserChannel, loadAdvertiserChannels, saveAdvertiserChannels } from './bot.js';
+import { addAdvertiserChannel, loadAdvertiserChannels } from './bot.js';
 
 // Загрузка существующих каналов
 loadAdvertiserChannels();

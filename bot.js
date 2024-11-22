@@ -1,7 +1,6 @@
 import TelegramBot from 'node-telegram-bot-api';
 import express from 'express';
 import dotenv from 'dotenv';
-import { config } from './config.js';
 import { FileManager } from './utils/fileManager.js';
 import { MediaDownloader } from './services/mediaDownloader.js';
 import { TranslationService } from './services/translationService.js';
