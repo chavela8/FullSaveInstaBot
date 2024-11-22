@@ -1,0 +1,30 @@
+name: Backup
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Ежедневно в полночь
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Use GitHub token
+        env:
+          GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
+        run: |
+          # Ваш код, использующий GITHUB_TOKEN
+          echo "GITHUB_TOKEN is set to $GITHUB_TOKEN"
+
+      - name: Zip the project
+        run: |
+          zip -r backup.zip .
+
+      - name: Upload backup to GitHub Releases
+        uses: ncipollo/release-action@v1
+        with:
+          tag: backup-${{ github.sha }}
+          artifacts: backup.zip
+          token: ${{ secrets.GITHUB_TOKEN }}

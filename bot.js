@@ -6,6 +6,7 @@ import { MediaDownloader } from './services/mediaDownloader.js';
 import { TranslationService } from './services/translationService.js';
 import winston from 'winston';
 import rateLimit from 'express-rate-limit';
+import { Pool } from 'pg';
 
 dotenv.config();
 
@@ -47,6 +48,23 @@ const findFreePort = async (startPort) => {
         server.listen(startPort); // Пробуем начать с указанного порта
     });
 };
+
+// Подключение к базе данных
+const pool = new Pool({
+    connectionString: process.env.DATABASE_URL,
+    ssl: {
+        rejectUnauthorized: false
+    }
+});
+
+pool.query('SELECT NOW()', (err, res) => {
+    if (err) {
+        console.error('Ошибка при подключении к базе данных:', err);
+    } else {
+        console.log('Подключение к базе данных успешно:', res.rows[0]);
+    }
+    pool.end();
+});
 
 class TelegramMediaBot {
     constructor() {
