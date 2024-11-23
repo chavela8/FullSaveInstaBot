@@ -1,0 +1,9 @@
+{
+  "welcome": "ようこそ！Instagram、TikTok、YouTubeからのリンクを送信して、コンテンツをダウンロードしてください。",
+  "invalidUrl": "有効なInstagram、TikTok、またはYouTubeのリンクを送信してください。",
+  "processing": "リクエストを処理しています...",
+  "unsupportedUrl": "このリンクはサポートされていません。Instagram、TikTok、またはYouTubeのリンクを送信してください。",
+  "sourceLink": "ソース: {sourceLink}",
+  "error": "申し訳ありませんが、リクエストの処理中にエラーが発生しました。後でもう一度お試しください。",
+  "subscribeRequest": "ダウンロードの制限に達しました。ボットの使用を続けるには、チャンネル {channelLink} を購読してください。"
+}

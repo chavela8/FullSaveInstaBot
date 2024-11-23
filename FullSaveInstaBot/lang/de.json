@@ -1,0 +1,9 @@
+{
+  "welcome": "Willkommen! Senden Sie mir einen Link von Instagram, TikTok oder YouTube, um Inhalte herunterzuladen.",
+  "invalidUrl": "Bitte senden Sie einen gültigen Link von Instagram, TikTok oder YouTube.",
+  "processing": "Ihre Anfrage wird bearbeitet...",
+  "unsupportedUrl": "Dieser Link wird nicht unterstützt. Bitte senden Sie einen Link von Instagram, TikTok oder YouTube.",
+  "sourceLink": "Quelle: {sourceLink}",
+  "error": "Entschuldigung, bei der Verarbeitung Ihrer Anfrage ist ein Fehler aufgetreten. Bitte versuchen Sie es später noch einmal.",
+  "subscribeRequest": "Sie haben das Download-Limit erreicht. Bitte abonnieren Sie den Kanal {channelLink}, um den Bot weiterhin zu verwenden."
+}

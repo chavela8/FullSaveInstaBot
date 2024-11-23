@@ -1,0 +1,9 @@
+{
+  "welcome": "欢迎！发送 Instagram、TikTok 或 YouTube 的链接以下载内容。",
+  "invalidUrl": "请发送有效的 Instagram、TikTok 或 YouTube 链接。",
+  "processing": "正在处理您的请求...",
+  "unsupportedUrl": "不支持此链接。请发送 Instagram、TikTok 或 YouTube 的链接。",
+  "sourceLink": "来源：{sourceLink}",
+  "error": "抱歉，处理您的请求时发生错误。请稍后再试。",
+  "subscribeRequest": "您已达到下载限制。请订阅频道 {channelLink} 以继续使用机器人。"
+}
